@@ -126,42 +126,6 @@ body {
   }
   
   /*-------------------------------------------HERO------------------------------*/
-  .hero1 {
-    background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%), url(../assets/worstofevil.jpg);
- 
-  }
-  
-  .hero2 {
-    background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%), url(../assets/glory.jpg);
-
-  }
-  
-  .hero3 {
-    background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%), url(../assets/chacha.jpg);
-
-  }
-  
-  .hero4 {
-    background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%), url(../assets/penthouse.jpg);
- 
-  }
-  
-  .hero5 {
-    background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%), url(../assets/doona.jpg);
-   
-  }
-  
-  .hero6 {
-    background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%), url(../assets/beyondevil.jpg);
-    
-  }
-  
-  .hero_item {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
   .hero_text {
     color: #ffe0e9;
     font-weight: 700;
@@ -169,12 +133,27 @@ body {
     font-size: 45px;
     max-width: 50%;
     padding-top: 55vh;
-    padding-bottom: 10vh;
-  
+    padding-bottom: 15vh;
   }
   .slick-dots {
     transform: translateY(-10vh);
   }
+  .slick-dots li button:before {
+    color: #ff9aab !important; 
+    font-size: 12px !important;
+}
+
+.slick-prev, .slick-next {
+    z-index: 2;
+}
+.slick-prev {
+    margin-left: 40px; 
+} 
+.slick-next {
+    margin-right: 40px;
+}
+
+
   
   /*----------------------------MOVIES&SHOWS-----------------------------*/
   .movies, .shows {

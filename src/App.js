@@ -3,6 +3,7 @@
 import "./styles/main.scss";
 //PAGES
 import Hero from "./pages/Hero";
+import MainSliders from "./pages/MainSliders"
 
 function App() {
   return (
@@ -33,20 +34,7 @@ function App() {
       </div>
     </header>
     <Hero></Hero>
-    <section className="movies container">
-      <h1>Movies</h1>
-      <h2>Trending now</h2>
-      <div className="movie_trending"></div>
-      <h2>Top 10</h2>
-      <div className="movie_top"></div>
-    </section>
-    <section className="shows container">
-      <h1>Shows</h1>
-      <h2>Trending now</h2>
-      <div className="shows_trending"></div>
-      <h2>Top 10</h2>
-      <div className="shows_top"></div>
-    </section>
+    <MainSliders></MainSliders>
     <section className="signup container">
       <div className="signup_text">
         <h3>Start your free trial today!</h3>
@@ -57,6 +45,7 @@ function App() {
       </div>
       <button className="signup_button">Sign Up</button>
     </section>
+
   </div>
   );
 }
