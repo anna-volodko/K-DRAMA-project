@@ -14,7 +14,7 @@ export default function MovieListWithDetails(){
   }, []);
 
   return (
-      <div>
+      <>
         {MovieDescription.map((movie) => (
           <div key={movie.id}>
             <p>{movie.title}</p>
@@ -23,6 +23,6 @@ export default function MovieListWithDetails(){
             <p>{movie.releaseYear}</p>
           </div>
         ))}
-      </div>
+      </>
   );
 };

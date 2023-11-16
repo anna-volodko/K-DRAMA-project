@@ -14,16 +14,16 @@ export default function MovieListWithDetails(){
   }, []);
 
   return (
-        <div>
+        <>
         {MovieDescription.map((movie) => (
-          <div key={movie.id}>
+          <div className='card' key={movie.id}>
             <p>{movie.title}</p>
-            <img src={movie.poster} alt={movie.title} />
+            <img className='poster' src={movie.poster} alt={movie.title} />
             <p>{movie.rating}</p>
             <p>{movie.releaseYear}</p>
           </div>
         ))}
-      </div>
+      </>
   );
 };
 

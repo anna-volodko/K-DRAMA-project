@@ -4,6 +4,7 @@ import "./styles/main.scss";
 //PAGES
 import Hero from "./pages/Hero";
 import MainSliders from "./pages/MainSliders"
+import Footer from "./pages/Footer"
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
       </div>
       <button className="signup_button">Sign Up</button>
     </section>
-
+    <Footer></Footer>
   </div>
   );
 }

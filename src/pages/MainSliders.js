@@ -21,15 +21,15 @@ export default function MainSliders() {
         <h1>Movies</h1>
         <h2>Trending now</h2>
         <div className="movie_trending">
-          <Slider {...settings}>
+        <Slider {...settings}>
             <PopularMovies/>
           </Slider>
         </div>
         <h2>Top 10</h2>
         <div className="movie_top">
-          <Slider {...settings}>
+        
             <NewMovies/>
-          </Slider>
+         
         </div>
       </section>
       <section className="shows container">

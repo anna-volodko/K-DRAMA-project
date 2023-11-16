@@ -19,7 +19,7 @@ export const getPopularMovie = async () => {
   
       return movieDescription.slice(0, 10);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error:', error);
       return [];
     }
   };
@@ -41,7 +41,7 @@ export const getPopularMovie = async () => {
   
       return movieDescription.slice(0, 10);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error:', error);
       return [];
     }
   };
