@@ -18,6 +18,7 @@ export default function MovieListWithDetails(){
         {MovieDescription.map((movie) => (
           <div className='card' key={movie.id}>
             <p>{movie.title}</p>
+            <p>{movie.original}</p>
             <img className='poster' src={movie.poster} alt={movie.title} />
             <p>{movie.rating}</p>
             <p>{movie.releaseYear}</p>

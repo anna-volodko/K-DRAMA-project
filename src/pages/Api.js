@@ -15,6 +15,7 @@ export const getPopularMovie = async () => {
         poster: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
         rating: movie.vote_average,
         releaseYear: new Date(movie.release_date).getFullYear(),
+        original: movie.original_title,
       }));
   
       return movieDescription.slice(0, 10);
