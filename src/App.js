@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 //STYLES
 import "./styles/main.scss";
 //PAGES
