@@ -2,11 +2,18 @@ import axios from 'axios';
 
 const API_KEY = 'a80e9550bcc216e373c39f9aeaf8ffd4';
 const BASE_URL = 'https://api.themoviedb.org/3';
+const MOVIE = '/discover/movie?';
+const SHOW = '/discover/tv?';
+const KO = '&with_original_language=ko';
+const SORT_BY_VOTE = 'sort_by=vote_average.desc&vote_count.gte';
+let PAGE = 1;
+let DRAMA_TYPE = '/search/multi?';
+
 
 export const getPopularMovie = async () => {
     try {
       const response = await axios.get(
-        `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_original_language=ko&sort_by=vote_average.desc&vote_count.gte=1300`
+        `${BASE_URL}${MOVIE}api_key=${API_KEY}${KO}&${SORT_BY_VOTE}=1300`
       );
   
       const movieDescription = response.data.results.map((movie) => ({
@@ -30,7 +37,7 @@ export const getPopularMovie = async () => {
   export const getPopularShow = async () => {
     try {
       const response = await axios.get(
-        `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_original_language=ko&sort_by=vote_average.desc&vote_count.gte=50`
+        `${BASE_URL}${SHOW}api_key=${API_KEY}${KO}&${SORT_BY_VOTE}=50`
       );
   
       const showDescription = response.data.results.map((show) => ({
@@ -52,4 +59,4 @@ export const getPopularMovie = async () => {
     }
   };
 
- 
+  

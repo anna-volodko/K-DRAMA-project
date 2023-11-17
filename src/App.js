@@ -4,6 +4,7 @@ import "./styles/main.scss";
 import Hero from "./pages/Hero";
 import MainSliders from "./pages/MainSliders"
 import Footer from "./pages/Footer"
+import DramaSearch from "./pages/DramaSearch";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
     </header>
     <Hero></Hero>
     <MainSliders></MainSliders>
+    <DramaSearch></DramaSearch>
     <section className="signup container">
       <div className="signup_text">
         <h3>Start your free trial today!</h3>
