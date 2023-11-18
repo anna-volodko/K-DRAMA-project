@@ -13,10 +13,10 @@ export default function DramaSearch() {
         {
           params: {
             api_key: "a80e9550bcc216e373c39f9aeaf8ffd4",
-            language: "en-US",
+            language: "ko",
             query: searchText,
             include_adult: false,
-            region: "KR",
+            region: "KO",
           },
         }
       );
@@ -70,7 +70,7 @@ export default function DramaSearch() {
             <div className="card_bottom">
               <div className="runtime">
                 <img src="../assets/time.svg" alt="time" className="time_img" />
-                <p>125 m</p>
+                <p>125m</p>
               </div>
               <p className="release_date">
                 {(item.release_date &&

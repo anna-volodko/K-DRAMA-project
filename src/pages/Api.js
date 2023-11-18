@@ -50,8 +50,9 @@ export const getPopularMovie = async () => {
         overview: show.overview,
         episodes: show.number_of_episodes,
         genres: show.genres,
+
       }));
-  
+      console.log(showDescription.slice(0, 10))
       return showDescription.slice(0, 10);
     } catch (error) {
       console.error('Error:', error);
