@@ -3,9 +3,22 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { getPopularMovie, getPopularShow } from "./Api";
+import DescriptionModal from "./DescriptionModal";
 
 export default function MainSliders() {
   const [MovieDescription, setMoviesWithDetails] = useState([]);
+  const [chosenDrama, setChosenDrama] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (drama) => {
+    setChosenDrama(drama);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     const getMoviesWithDetails = async () => {
       const shows = await getPopularMovie();
@@ -14,6 +27,7 @@ export default function MainSliders() {
 
     getMoviesWithDetails();
   }, []);
+ 
   const [ShowDescription, setShowWithDetails] = useState([]);
   useEffect(() => {
     const getShowWithDetails = async () => {
@@ -39,7 +53,7 @@ export default function MainSliders() {
         <div className="movie_trending">
           <Slider {...settings}>
             {MovieDescription.map((movie) => (
-              <div className="card" key={movie.id}>
+              <div className="card" key={movie.id} onClick={() => openModal(movie)}>
                 <p className="card_title">{movie.title}</p>
                 <img className="poster" src={movie.poster} alt={movie.title} />
                 <div className="card_bottom">
@@ -56,6 +70,13 @@ export default function MainSliders() {
               </div>
             ))}
           </Slider>
+          {chosenDrama && (
+        <DescriptionModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          drama={chosenDrama}
+        />
+      )}
         </div>
       </section>
       <section className="shows container">
@@ -63,7 +84,7 @@ export default function MainSliders() {
         <div className="shows_trending">
           <Slider {...settings}>
             {ShowDescription.map((show) => (
-              <div className="card" key={show.id}>
+              <div className="card" key={show.id} onClick={() => openModal(show)}>
                 <p className="card_title">{show.title}</p>
                 <img className="poster" src={show.poster} alt={show.title} />
                 <div className="card_bottom_show">
@@ -81,6 +102,13 @@ export default function MainSliders() {
               </div>
             ))}
           </Slider>
+          {chosenDrama && (
+        <DescriptionModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          drama={chosenDrama}
+        />
+      )}
         </div>
       </section>
     </>

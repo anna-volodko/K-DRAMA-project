@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Pagination } from "@mui/material";
+import DescriptionModal from "./DescriptionModal";
 
 export default function DramaSearch() {
   const [searchText, setSearchText] = useState("");
   const [results, setResults] = useState([]);
+  const [chosenDrama, setChosenDrama] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const searchDramas = async () => {
     try {
@@ -13,7 +16,7 @@ export default function DramaSearch() {
         {
           params: {
             api_key: "a80e9550bcc216e373c39f9aeaf8ffd4",
-            language: "ko",
+            language: "en",
             query: searchText,
             include_adult: false,
             region: "KO",
@@ -40,6 +43,14 @@ export default function DramaSearch() {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentResults = results.slice(indexOfFirstItem, indexOfLastItem);
 
+  const openModal = (drama) => {
+    setChosenDrama(drama);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <section className="container search">
       <p className="search_text">Start your k-drama journey today:</p>
@@ -58,13 +69,18 @@ export default function DramaSearch() {
       </form>
       <div className="results_list">
         {currentResults.map((item) => (
-          <div className="card" key={item.id}>
+          <div className="card" key={item.id} onClick={() => openModal(item)}>
             <p className="card_title">{item.title || item.name}</p>
-            {item.poster_path && (
+            {item.poster_path ? (
               <img
                 className="poster"
                 src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
                 alt={item.title}
+              />
+            ) : (
+              <img
+                className="poster"
+                src="../assets/img_placeholder.png"
               />
             )}
             <div className="card_bottom">
@@ -96,9 +112,16 @@ export default function DramaSearch() {
               color: "#ff9aab",
               borderColor: "#ff9aab",
               background: "#ff9aab28",
-              borderRadius: '25px'
+              borderRadius: "25px",
             },
           }}
+        />
+      )}
+      {chosenDrama && (
+        <DescriptionModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          drama={chosenDrama}
         />
       )}
     </section>

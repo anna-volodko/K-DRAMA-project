@@ -452,4 +452,75 @@ body {
   margin-top: 30px;
   opacity: 0.6;
 }
+/*------------------------------MODAL------------------------------------*/
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
 
+.modal {
+  background-color: #ff9aab;
+  border-radius: 5px;
+  z-index: 3; 
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+}
+.exit_button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  color: #ffc0cb;
+  border: none;
+  font-size: 30px;
+
+}
+.modal_info {
+  max-width: 600px;
+  padding: 50px;
+  color: #313131;
+}
+.modal_poster {
+  width: 400px;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+.drama_about {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.drama_rate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal_title {
+  font-size: 30px;
+  font-weight: 800;
+}
+.fav_button {
+  background: transparent;
+  border: 3px solid #ffc0cb;
+  border-radius: 5px;
+  color: #ffe0e9;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+  &:hover {
+    background-color: #ff7f94;
+  }
+}
