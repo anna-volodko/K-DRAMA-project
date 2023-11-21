@@ -59,19 +59,13 @@ export default function DramaSearch() {
         {currentResults.map((item) => (
           <div className="card" key={item.id} onClick={() => openModal(item)}>
             <p className="card_title">{item.title}</p>
-              <img
-                className="poster"
-                src={item.poster}
-                alt={item.title}
-              />
+              <img className="poster" src={item.poster} alt={item.name} />
             <div className="card_bottom">
               <div className="runtime">
                 <img src="../assets/time.svg" alt="time" className="time_img" />
                 <p>125m</p>
               </div>
-              <p className="release_date">
-                {item.releaseYear}
-              </p>
+              <p className="release_date">{item.releaseYear}</p>
             </div>
           </div>
         ))}
