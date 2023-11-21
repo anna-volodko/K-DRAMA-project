@@ -9,33 +9,27 @@ export default function DescriptionModal({ isOpen, closeModal, drama }) {
   return (
     <div className="modal_wrapper" onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        {drama.poster_path ? (
           <img
             className="modal_poster"
-            src={`https://image.tmdb.org/t/p/w500${drama.poster_path}`}
-            alt={drama.name}
+            src={drama.poster}
+            alt={drama.title}
           />
-        ) : (
-          <img className="modal_poster" src="../assets/img_placeholder.png" alt="" />
-        )}
         <div className="modal_info">
-          <p className="modal_title">{drama.title || drama.name}</p>
+          <p className="modal_title">{drama.title}</p>
           <p>
-            {drama.release_date &&
-              (new Date(drama.release_date).getFullYear() ||
-                new Date(drama.first_air_date).getFullYear())}
+            {drama.releaseYear}
           </p>
           <p className="drama_about">{drama.overview}</p>
           <div className="drama_rate">
             <Box component="fieldset" borderColor="transparent">
               <Rating
                 name="read-only"
-                value={drama.vote_average / 2}
+                value={drama.rating / 2}
                 readOnly
                 sx={{ color: "#313131" }}
               />
             </Box>
-            <p className="rate_text"> - {drama.vote_average && drama.vote_average.toFixed(1)} ({drama.vote_count} votes)</p>
+            <p className="rate_text"> - {drama.rating && drama.rating.toFixed(1)} ({drama.voters} votes)</p>
           </div>
           <button className="fav_button">Add to favorite</button>
         </div>

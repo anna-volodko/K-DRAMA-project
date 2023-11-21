@@ -2,11 +2,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { getPopularMovie, getPopularShow } from "./Api";
-import DescriptionModal from "./DescriptionModal";
+import { searchMedia } from "./Api"; 
+import DescriptionModal from "./DescriptionModal"; 
 
 export default function MainSliders() {
-  const [MovieDescription, setMoviesWithDetails] = useState([]);
+  const [MovieDescription, setMovieDescription] = useState([]);
+  const [ShowDescription, setShowDescription] = useState([]);
   const [chosenDrama, setChosenDrama] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -20,24 +21,20 @@ export default function MainSliders() {
   };
 
   useEffect(() => {
-    const getMoviesWithDetails = async () => {
-      const shows = await getPopularMovie();
-      setMoviesWithDetails(shows);
+    const findData = async () => {
+      try {
+        const movie = await searchMedia('movie');
+        setMovieDescription(movie);
+
+        const show = await searchMedia('show');
+        setShowDescription(show);
+      } catch (error) {
+        console.error("Error:", error);
+      }
     };
 
-    getMoviesWithDetails();
+    findData();
   }, []);
- 
-  const [ShowDescription, setShowWithDetails] = useState([]);
-  useEffect(() => {
-    const getShowWithDetails = async () => {
-      const movies = await getPopularShow();
-      setShowWithDetails(movies);
-    };
-
-    getShowWithDetails();
-  }, []);
-
   const settings = {
     dots: false,
     infinite: true,
