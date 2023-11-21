@@ -39,13 +39,12 @@ function App() {
     <DramaSearch></DramaSearch>
     <section className="signup container">
       <div className="signup_text">
-        <h3>Start your free trial today!</h3>
+        <h3>Save and discover new korean media with K-DRAMATIC</h3>
         <p className="smaller_text">
-          This is a clear and concise call to action that encourages users to
-          sign up for a free trial of K-DRAMATIC.
+          Add your favorite movies and shows to the list to rewatch them later.
         </p>
       </div>
-      <button className="signup_button">Sign Up</button>
+      <button className="signup_button">Check favorites</button>
     </section>
     <Footer></Footer>
   </div>

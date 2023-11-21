@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { searchMedia } from "./Api"; 
 import DescriptionModal from "./DescriptionModal"; 
 
-export default function MainSliders({ typeMovie, typeShow }) {
+export default function MainSliders() {
   const [MovieDescription, setMovieDescription] = useState([]);
   const [ShowDescription, setShowDescription] = useState([]);
   const [chosenDrama, setChosenDrama] = useState(null);
@@ -23,10 +23,10 @@ export default function MainSliders({ typeMovie, typeShow }) {
   useEffect(() => {
     const findData = async () => {
       try {
-        const movie = await searchMedia('', typeMovie, '');
+        const movie = await searchMedia('', true, false);
         setMovieDescription(movie);
 
-        const show = await searchMedia('', '', typeShow);
+        const show = await searchMedia('', false, true);
         setShowDescription(show);
       } catch (error) {
         console.error("Error:", error);
@@ -34,7 +34,7 @@ export default function MainSliders({ typeMovie, typeShow }) {
     };
 
     findData();
-  }, [[typeMovie, typeShow]]);
+  }, );
   const settings = {
     dots: false,
     infinite: true,

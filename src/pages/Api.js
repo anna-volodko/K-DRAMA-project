@@ -9,12 +9,12 @@ export async function searchMedia(searchText, typeMovie, typeShow) {
   try {
     let link = "";
     if (searchText) {
-      link = `${BASE_URL}${ALL_RESULTS}?api_key=${API_KEY}&language=en&query=${searchText}&include_adult=false&region=KO`;
+      link = `${BASE_URL}${ALL_RESULTS}?api_key=${API_KEY}&language=en&query=${searchText}&include_adult=false`;
     } else {
       if (typeMovie) {
-        link = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_original_language=ko&sort_by=popularity.desc&region=KO`;
+        link = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_original_language=ko&sort_by=popularity.desc`;
       } else if (typeShow) {
-        link = `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_original_language=ko&sort_by=popularity.desc&region=KO`;
+        link = `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_original_language=ko&sort_by=popularity.desc`;
       }
     }
 
