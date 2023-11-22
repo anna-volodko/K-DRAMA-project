@@ -12,12 +12,12 @@ import TrialSection from "./pages/TrialSection";
 function App() {
   return (
     <div className="page_wrapper">
-      <Header />
-      <Hero />
-      <MainSliders />
-      <DramaSearch />
-      <TrialSection />
-      <Footer />
+        <Header />
+        <Hero />
+        <MainSliders/>
+        <DramaSearch/>
+        <TrialSection />
+        <Footer />
     </div>
   );
 }

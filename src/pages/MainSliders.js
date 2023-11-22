@@ -47,7 +47,7 @@ export default function MainSliders() {
     <>
       <section className="movies container">
         <h1>Popular movies</h1>
-        <div className="movie_trending">
+        <div id="movies" className="movie_trending">
           <Slider {...settings}>
             {MovieDescription.map((movie) => (
               <div className="card" key={movie.id} onClick={() => openModal(movie)}>
@@ -76,7 +76,7 @@ export default function MainSliders() {
       )}
         </div>
       </section>
-      <section className="shows container">
+      <section id="shows" className="shows container">
         <h1>Popular shows</h1>
         <div className="shows_trending">
           <Slider {...settings}>

@@ -3,7 +3,7 @@ import svgSprite from '../assets/sprite.svg';
 
 export default function Footer() {
     return(
-        <footer>
+        <footer id="footer">
       <div className="container footer">
         <div className="footer_nav">
           <div className="footer_column">

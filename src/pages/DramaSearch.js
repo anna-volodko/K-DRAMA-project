@@ -44,7 +44,7 @@ export default function DramaSearch() {
     setIsModalOpen(false);
   };
   return (
-    <section className="container search">
+    <section id="search" className="container search">
       <p className="search_text">Start your k-drama journey today:</p>
       <form className="search_form" onSubmit={searchHandler}>
         <input
