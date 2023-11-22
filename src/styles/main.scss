@@ -535,13 +535,74 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; 
+  z-index: 3; 
 }
 .watch_modal {
   background-color: #ff9aab;
   border-radius: 5px;
   z-index: 3; 
   display: flex;
+  flex-direction: column;
   position: relative;
   border-radius: 20px;
+  width: 1200px;
+  padding: 30px;
+  color: #313131;
+}
+.watchlist_items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.watchlist_item {
+  max-width: 200px;
+  border: 1px solid #ffc0cb;
+  border-radius: 20px;
+  padding: 10px;
+}
+.watch_poster {
+  max-width: 200px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 15px;
+  margin: 0 auto;
+  height: 285px;
+}
+.watchlist_title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  
+}
+.watchmodal_title {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  height: 40px;
+
+}
+.remove_button {
+  margin-top: 5px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #ff7f94;
+  border: 3px solid #ffc0cb;
+  border-radius: 10px;
+  color: #ffe0e9;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    background-color: #fc6d85;
+  }
+}
+.watchlist_empty {
+  text-align: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  font-size: 18px;
 }

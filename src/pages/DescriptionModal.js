@@ -32,7 +32,7 @@ export default function DescriptionModal({ isOpen, closeModal, drama }) {
               - {drama.rating && drama.rating.toFixed(1)} ({drama.voters} votes)
             </p>
           </div>
-          <button className="fav_button" onClick={() => addToList(drama.id)}>Add to watchlist</button>
+          <button className="fav_button" onClick={() => addToList(drama)}>Add to watchlist</button>
         </div>
         <button className="exit_button" onClick={closeModal}>
           X
