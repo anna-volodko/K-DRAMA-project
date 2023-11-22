@@ -10,13 +10,13 @@ export default function Footer() {
             <p className="footer_heading">Home</p>
             <ul className="footer_list">
               <li className="footer_item">
-                <a href="#" className="footer_link">Categories</a>
+                <a href="/" className="footer_link">Categories</a>
               </li>
               <li className="footer_item">
-                <a href="#" className="footer_link">Devices</a>
+                <a href="/" className="footer_link">Devices</a>
               </li>
               <li className="footer_item">
-                <a href="#" className="footer_link">Gernes</a>
+                <a href="/" className="footer_link">Gernes</a>
               </li>
             </ul>
           </div>
@@ -24,27 +24,27 @@ export default function Footer() {
             <p className="footer_heading">Support</p>
             <ul className="footer_list">
               <li className="footer_item">
-                <a href="#" className="footer_link">Contact Us</a>
+                <a href="/" className="footer_link">Contact Us</a>
               </li>
               <li className="footer_item">
-                <a href="#" className="footer_link">FAQ</a>
+                <a href="/" className="footer_link">FAQ</a>
               </li>
             </ul>
           </div>
           <div className="footer_column">
             <p className="footer_heading">Contact Us</p>
             <div className="contact_list">
-              <a href="#" className="contact_link">
+              <a href="/" className="contact_link">
                 <svg className="facebook">
                   <use xlinkHref={`${svgSprite}#facebook`} />
                 </svg>
               </a>
-              <a href="#" className="contact_link">
+              <a href="/" className="contact_link">
                 <svg className="twitter">
                   <use xlinkHref={`${svgSprite}#twitter`} />
                 </svg>
               </a>
-              <a href="#" className="contact_link">
+              <a href="/" className="contact_link">
                 <svg className="linkedin">
                   <use xlinkHref={`${svgSprite}#linkedin`} />
                 </svg>

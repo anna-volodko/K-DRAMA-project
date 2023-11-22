@@ -8,15 +8,19 @@ export default function DramaSearch() {
   const [results, setResults] = useState([]);
   const [chosenDrama, setChosenDrama] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [noResults, setNoResults] = useState(false);
 
   const searchDramas = async () => {
     try {
       const data = await searchMedia(searchText);
+      console.log("Length:", data.length); 
       setResults(data);
+      setNoResults(data.length === 0); 
     } catch (error) {
       console.error("Error", error);
     }
   };
+
   const searchHandler = (e) => {
     e.preventDefault();
     searchDramas();
@@ -56,19 +60,35 @@ export default function DramaSearch() {
         </button>
       </form>
       <div className="results_list">
-        {currentResults.map((item) => (
-          <div className="card" key={item.id} onClick={() => openModal(item)}>
-            <p className="card_title">{item.title}</p>
-              <img className="poster" src={item.poster} alt={item.name} />
-            <div className="card_bottom">
-              <div className="runtime">
-                <img src="../assets/time.svg" alt="time" className="time_img" />
-                <p>125m</p>
+        {results.length > 0 ? (
+          currentResults.length > 0 ? (
+            currentResults.map((item) => (
+              <div
+                className="card"
+                key={item.id}
+                onClick={() => openModal(item)}
+              >
+                <p className="card_title">{item.title}</p>
+                <img className="poster" src={item.poster} alt={item.name} />
+                <div className="card_bottom">
+                  <div className="runtime">
+                    <img
+                      src="../assets/time.svg"
+                      alt="time"
+                      className="time_img"
+                    />
+                    <p>125m</p>
+                  </div>
+                  <p className="release_date">{item.releaseYear}</p>
+                </div>
               </div>
-              <p className="release_date">{item.releaseYear}</p>
-            </div>
-          </div>
-        ))}
+            ))
+            ) : (
+              <p className="no_results">No results</p>
+            )
+          ) : (
+            noResults && <p className="no_results">No results.Try again...</p>
+          )}
       </div>
       {results.length > 0 && (
         <Pagination

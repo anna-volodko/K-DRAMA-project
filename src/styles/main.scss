@@ -445,7 +445,14 @@ body {
   opacity: 0.5;
   text-transform: uppercase;
 }
+.no_results {
 
+  color: #ffc0cb;
+  font-size: 20px;
+  max-width: 500px;
+  margin-left: 12px;
+  opacity: 0.5;
+}
 .pagination {
   display: flex;
   justify-content: center;
@@ -536,6 +543,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 3; 
+  overflow-y: auto;
 }
 .watch_modal {
   background-color: #ff9aab;
@@ -605,4 +613,13 @@ body {
   grid-column-start: 2;
   grid-column-end: 5;
   font-size: 18px;
+}
+
+.added {
+  background-color: #d1d0d0;
+  border-color: #999;
+  &:hover {
+    background-color: #d1d0d0;
+    border-color: #999;
+  }
 }

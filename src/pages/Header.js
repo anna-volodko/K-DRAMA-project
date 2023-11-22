@@ -16,21 +16,21 @@ export default function Header() {
         <header>
         <div className="navigation container">
           <div className="logo">
-            <a href="#" className="logo_link">
+            <a href="/" className="logo_link">
               <img className="star" src="./assets/dots.svg" alt="" />
               <p className="logo_text">K-DRAMATIC</p>
             </a>
           </div>
           <div className="main_nav">
-            <a href="#" className="nav_item">Movies</a>
-            <a href="#" className="nav_item">Shows</a>
-            <a href="#" className="nav_item">About Us</a>
-            <a href="#" className="nav_button">
+            <a href="/movies" className="nav_item">Movies</a>
+            <a href="/shows" className="nav_item">Shows</a>
+            <a href="/about" className="nav_item">About Us</a>
+            <a href="/search" className="nav_button">
               <img src="./assets/search_icon.svg" alt="" className="icon_search" />
               Go to Search
             </a>
-            <a href="#" className="nav_button" onClick={openModal}>
-                Open watchlist</a>
+            <button className="nav_button" onClick={openModal}>
+                Open watchlist</button>
           </div>
           <div className="hamburger">
             <span className="bar"></span>
