@@ -452,7 +452,7 @@ body {
   margin-top: 30px;
   opacity: 0.6;
 }
-/*------------------------------MODAL------------------------------------*/
+/*------------------------------MODAL DESCTIPTION------------------------------------*/
 .modal_wrapper {
   position: fixed;
   top: 0;
@@ -523,4 +523,25 @@ body {
   &:hover {
     background-color: #ff7f94;
   }
+}
+/*------------------------------WATCHLIST MODAL-----------------------------*/
+.watchlist_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+.watch_modal {
+  background-color: #ff9aab;
+  border-radius: 5px;
+  z-index: 3; 
+  display: flex;
+  position: relative;
+  border-radius: 20px;
 }

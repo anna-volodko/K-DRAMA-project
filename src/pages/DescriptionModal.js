@@ -2,7 +2,9 @@ import React from "react";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 
+
 export default function DescriptionModal({ isOpen, closeModal, drama }) {
+  
   if (!isOpen) return null;
 
   return (
@@ -27,7 +29,7 @@ export default function DescriptionModal({ isOpen, closeModal, drama }) {
               - {drama.rating && drama.rating.toFixed(1)} ({drama.voters} votes)
             </p>
           </div>
-          <button className="fav_button">Add to favorite</button>
+          <button className="fav_button">Add to watchlist</button>
         </div>
         <button className="exit_button" onClick={closeModal}>
           X
