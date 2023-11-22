@@ -34,7 +34,7 @@ export default function MainSliders() {
     };
 
     findData();
-  }, );
+  }, []);
   const settings = {
     dots: false,
     infinite: true,

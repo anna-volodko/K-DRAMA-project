@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
+import useWatchlist from "../hooks/useWatchlist.js"
+
 
 
 export default function DescriptionModal({ isOpen, closeModal, drama }) {
-  
+  const {addToList} = useWatchlist()
+  useEffect(() => {console.log(drama)}, [drama])
   if (!isOpen) return null;
-
+  
   return (
     <div className="modal_wrapper" onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -29,7 +32,7 @@ export default function DescriptionModal({ isOpen, closeModal, drama }) {
               - {drama.rating && drama.rating.toFixed(1)} ({drama.voters} votes)
             </p>
           </div>
-          <button className="fav_button">Add to watchlist</button>
+          <button className="fav_button" onClick={() => addToList(drama.id)}>Add to watchlist</button>
         </div>
         <button className="exit_button" onClick={closeModal}>
           X
