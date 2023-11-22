@@ -6,10 +6,10 @@ export default function TrialSection() {
       <div className="signup_text">
         <h3>Save and discover new korean media with K-DRAMATIC</h3>
         <p className="smaller_text">
-          Add your favorite movies and shows to the list to rewatch them later.
+          Vote for your favorite k-drama, leave your comments and participate in discussions with others.
         </p>
       </div>
-      <button className="signup_button">Go to watchlist</button>
+      <button className="signup_button">SIGN UP FOR MORE</button>
     </section>
   );
 }
