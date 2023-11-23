@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import WatchlistModal from "./WatchlistModal";
+import WatchlistModal from "../modals/WatchlistModal";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);

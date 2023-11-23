@@ -1,5 +1,5 @@
 import React from "react";
-import useWatchlist from "../hooks/useWatchlist.js";
+import useWatchlist from "../helpers/useWatchlist.js";
 
 export default function WatchlistModal({ isOpen, closeModal }) {
   const { list, removeFromList } = useWatchlist();

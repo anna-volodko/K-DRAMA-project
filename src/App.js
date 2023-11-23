@@ -1,12 +1,12 @@
 //STYLES
 import "./styles/main.scss";
 //PAGES
-import Hero from "./pages/Hero";
-import MainSliders from "./pages/MainSliders";
-import Footer from "./pages/Footer";
-import DramaSearch from "./pages/DramaSearch";
-import Header from "./pages/Header";
-import TrialSection from "./pages/TrialSection";
+import Hero from "./components/Hero";
+import MainSliders from "./components/MainSliders";
+import Footer from "./components/Footer";
+import DramaSearch from "./components/DramaSearch";
+import Header from "./components/Header";
+import TrialSection from "./components/TrialSection";
 
 
 function App() {

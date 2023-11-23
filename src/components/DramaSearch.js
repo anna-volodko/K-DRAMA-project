@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Pagination } from "@mui/material";
-import DescriptionModal from "./DescriptionModal";
-import { searchMedia } from "./Api";
+import DescriptionModal from "../modals/DescriptionModal";
+import { searchMedia } from "../helpers/Api";
 
 export default function DramaSearch() {
   const [searchText, setSearchText] = useState("");
