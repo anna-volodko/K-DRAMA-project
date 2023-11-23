@@ -42,6 +42,26 @@ export default function MainSliders() {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 968,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
   return (
     <>

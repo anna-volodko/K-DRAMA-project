@@ -56,7 +56,7 @@ export default function DramaSearch() {
         />
         <button className="search_button" type="submit">
           <img src="./assets/search_icon.svg" alt="" className="icon_search" />
-          Search
+          <span className="search_span">Search</span>
         </button>
       </form>
       <div className="results_list">

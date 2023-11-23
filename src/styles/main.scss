@@ -483,7 +483,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; 
+  z-index: 10; 
 }
 
 .modal {
@@ -635,4 +635,195 @@ body {
     background-color: #ff9aab;
     border-color: #999;
   }
+}
+
+/*-----------------------------SMALL LAPTOP--------------------------*/
+@media screen and (max-width:1280px) {
+  .container {
+    max-width: 1000px;
+  }
+  .results_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .modal_poster {
+    width: 300px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  
+  }
+  .drama_about {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .modal_title {
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .watchlist_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width:968px) {
+  .container {
+    max-width: 700px;
+  }
+  .nav_item {
+    display: none;
+  }
+  .hero_text {
+    font-size: 25px;
+  }
+  .nav_button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .nav_watchlistbutton {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  .card_bottom {
+    font-size: 12px;
+  }
+  .card_bottom_show {
+    font-size: 12px;
+  }
+  .search_button {
+    font-size: 16px;
+  }
+  .signup_button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .results_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modal_poster {
+    width: 200px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  
+  }
+  .drama_about {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .modal_title {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .modal {
+    max-width: 70%;
+  }
+  .modal_info {
+    max-width: 50%;
+    padding: 10px;
+  }
+  .watchlist_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:576px) {
+  .container {
+    max-width: 300px;
+  }
+  .footer_nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .contact_list {
+    justify-content: center;
+  }
+  .logo_text {
+    font-size: 16px;
+  }
+  .nav_button {
+    display: none;
+  }
+  .navigation {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav_watchlistbutton {
+    padding: 5px;
+    margin: 0;
+  }
+  .hero_text {
+    max-width: 90%;
+  }
+  .movies, .shows {
+    padding: 20px;
+  }
+  .slick-prev {
+    margin-left: -20px; 
+} 
+  .slick-next {
+    margin-right: 5px;
+}
+.search_span {
+  display: none;
+}
+.icon_search {
+  margin: 0;
+}
+.search_input {
+  width: 80%;
+  padding-left: 15px;
+}
+.watchlist_items {
+  grid-template-columns: 1fr;
+}
+
+.search_input::placeholder {
+  padding-left: 0px;
+}
+.search_button {
+  padding: 8px 8px;
+}
+.signup {
+  flex-direction: column;
+  padding: 60px 20px;
+}
+.signup_button {
+  margin-top: 30px;
+}
+.results_list {
+  grid-template-columns: 1fr;
+}
+.modal_poster {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+
+}
+.drama_about {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.modal_title {
+  font-size: 16px;
+  font-weight: 800;
+}
+.modal {
+  max-width: 70%;
+  flex-direction: column;
+}
+.modal_info {
+  max-width: 90%;
+  padding: 10px;
+}
+.fav_button {
+  padding: 5px;
+}
+
 }
