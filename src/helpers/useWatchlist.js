@@ -4,12 +4,12 @@ export default function useWatchlist() {
   const [list, setList] = useState([]);
   
   useEffect(() => {
-    const localList = JSON.parse(localStorage.getItem("wishList")) || [];
+    const localList = JSON.parse(localStorage.getItem("watchList")) || [];
     if (localList.length) setList([...localList]);
   }, []);
   
   useEffect(() => {
-    localStorage.setItem("wishList", JSON.stringify(list));
+    localStorage.setItem("watchList", JSON.stringify(list));
     console.log(list);
   }, [list]);
   
